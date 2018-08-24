@@ -20,7 +20,7 @@ http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.h
 
   3. Install Git (https://git-scm.com/) and make sure it is on your path
 
-  4. Install Leiningen (https://leiningen.org/). Windows Users, you may get the error shown below. If you receive this error, read the directions that follow the error message below.
+  4. Install Leiningen (https://leiningen.org/). Windows Users, you may get the error shown below. If you receive this error, you can either replace your "lein.bat" file with the version in this repo or read the directions that follow the error message below.
      
   ```
   Downloading Leiningen now...

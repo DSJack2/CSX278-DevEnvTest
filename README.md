@@ -215,5 +215,4 @@ http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.h
 
   19. In the repl (not the core.clj source file!), type “(print-welcome)” and hit “Shift+Enter”
 
-  20. If everything was done correctly, you should see the welcome message print in the repl. Copy this message VERBATIM and paste it in as the answer to the second question
-  in the setup assignment.
+  20. If everything was done correctly, you should see the welcome message print in the repl. Use this message to answer the questions in the quiz on Brightspace.

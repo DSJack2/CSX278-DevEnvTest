@@ -20,7 +20,56 @@ http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.h
 
   3. Install Git (https://git-scm.com/) and make sure it is on your path
 
-  4. Install Leiningen (https://leiningen.org/)
+  4. Install Leiningen (https://leiningen.org/). Windows Users, you may get the error shown below. If you receive this error, read the directions that follow the error message below.
+     
+  ```
+  Downloading Leiningen now...
+  Exception calling "DownloadFile" with "2" argument(s): "The request was
+  aborted: Could not create SSL/TLS secure channel."
+  At line:1 char:145
+  + ... che]::DefaultNetworkCredentials; $client.DownloadFile($a, $f)} "https
+  ...
+  +                                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      + CategoryInfo          : NotSpecified: (:) [], MethodInvocationException
+      + FullyQualifiedErrorId : WebException
+  
+  
+  Failed to download https://github.com/technomancy/leiningen/releases/download/2.8.1/leiningen-2.8.1-standalone.zip
+  
+  It is possible that the download failed due to "powershell",
+  "curl" or "wget"'s inability to retrieve GitHub's security certificate.
+  The suggestions below do not check certificates, so use this only if
+  you understand the security implications of not doing so.
+  
+  The PowerShell failed to download the latest Leiningen version.
+  Try to use "curl" or "wget" to download Leiningen by setting up
+  the HTTP_CLIENT environment variable with one of the following
+  values:
+  
+    a) set HTTP_CLIENT=wget --no-check-certificate -O
+    b) set HTTP_CLIENT=curl -f -L -k -o
+  
+  NOTE: Make sure to *not* add double quotes when setting the value
+        of HTTP_CLIENT
+  ```
+
+  To fix this error, add the following line to your lein.bat file after "set LEIN_VERSION=2.8.2-SNAPSHOT":
+  
+  ```
+  set HTTP_CLIENT=curl -f -L -k -o
+  ```
+  
+  When you are done editing the file, it should look like this at the top:
+  
+  ```
+  @echo off
+
+  setLocal EnableExtensions EnableDelayedExpansion
+
+  set LEIN_VERSION=2.8.2-SNAPSHOT
+  set HTTP_CLIENT=curl -f -L -k -o
+  ```
+
 
   5. Check if Leiningen is on your path by opening either a terminal or command prompt and typing:
 
